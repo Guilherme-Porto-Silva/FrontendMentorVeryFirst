@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Product preview card component</title>
+  <style>
+    .attribution {
+      font-size: 1rem;
+      text-align: center;
+      margin: 5px;
+      a{ color: hsl(228, 45%, 44%); }
+      a:hover{ color: lime; }
+    }
+    body{
+      background-color: rgb(164, 168, 172);
+    }
+    section, main{
+      background-color: rgb(148, 133, 114);
+      padding: 1vmax;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      justify-self: center;
+      align-self: center;
+      width: 90vw;
+      height: 90vh;
+      border-radius: 5px;
+    }
+    main, img{
+      width: 80vw;
+      height: 80%;
+      overflow: scroll;
+    }
+    main{
+      background-color: #ffffff;
+      padding: 1%;
+      div{
+      display: flex;
+      justify-content: center;
+      h1{
+        color: green;
+        font-size: 110%;
+      }
+      h3{
+        opacity: 0.6;
+        font-size: 80%;
+      }
+      *{ margin: 10px 5px; }
+      }
+      h4{
+        opacity: 0.5;
+        letter-spacing: 3px;
+      }
+      a{
+        background-color: green;
+        color: #ffffff;
+        width: 60%;
+        height: 5%;
+        border-radius: 15px;
+        text-align: center;
+        text-decoration: none;
+        padding: 5px;
+      }
+    }
+    p{
+      width: 80%;
+      margin: 5px;
+    }
+    #desktop{ display: none; }
+    @media screen and (min-width: 700px) {
+    section{
+      flex-direction: row;
+      width: 60vw;
+      height: 80vh;
+    }
+    #mobile{ display: none; }
+    #desktop{ display: inline; }
+    }
+    </style>
+</head>
+<body>
+  <section>
+    <img src="./images/image-product-mobile.jpg" alt="perfume's photo (mobile version)" id="mobile">
+    <img src="./images/image-product-desktop.jpg" alt="perfume's photo (desktop version)" id="desktop">
+    <main>
+      <h4>
+        PERFUME
+      </h4>
+      <h1>
+        <b>
+          Gabrielle Essence Eau De Parfum
+        </b>
+      </h1>
+      <p>
+        A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.
+      </p>
+      <div>
+        <h1>
+          <i>
+            <b>
+            $149.99
+          </b>
+          </i>
+        </h1>
+        <h3>
+          <i>
+          <strike>
+            $169.99
+          </strike>
+        </i>
+        </h3>
+      </div>
+      <a href="" onclick="notDone()">
+        Add to Cart
+      </a>
+    </main>
+  </section>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Guilherme-Porto-Silva/Guilherme-Porto-Silva">Guigui-chan</a>.
+  </div>
+  <script>
+    function notDone(){
+      alert("Apologies, this button does nothing yet. Master has ordered me only to do the presentation card")
+    }
+  </script>
+</body>
+</html>
