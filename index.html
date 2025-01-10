@@ -6,17 +6,18 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Product preview card component</title>
   <style>
-    .attribution {
+    *{
       font-size: 1rem;
+      overflow-wrap: break-word;
+     }
+    .attribution {
       text-align: center;
       margin: 5px;
       a{ color: hsl(228, 45%, 44%); }
       a:hover{ color: lime; }
     }
-    body{
-      background-color: rgb(164, 168, 172);
-    }
-    section, main{
+      body{ background-color: rgb(164, 168, 172); }
+   section, main{
       background-color: rgb(148, 133, 114);
       padding: 1vmax;
       display: flex;
@@ -29,31 +30,28 @@
       height: 90vh;
       border-radius: 5px;
     }
-    main, img{
+      main, img{
       width: 80vw;
       height: 80%;
-      overflow: scroll;
     }
-    main{
+     main{
       background-color: #ffffff;
       padding: 1%;
-      div{
+       div{
       display: flex;
       justify-content: center;
-      h1{
-        color: green;
-        font-size: 110%;
-      }
-      h3{
+     h1{ color: green; }
+         h3{
         opacity: 0.6;
         font-size: 80%;
       }
-      *{ margin: 10px 5px; }
-      }
-      h4{
+        *{ margin: 10px 5px; }
+    }
+       h4{
         opacity: 0.5;
         letter-spacing: 3px;
-      }
+        text-align: left;
+     }
       a{
         background-color: green;
         color: #ffffff;
@@ -68,44 +66,45 @@
     p{
       width: 80%;
       margin: 5px;
-    }
-    #desktop{ display: none; }
+      font-size: 80%;
+   }
+      #desktop{ display: none; }
     @media screen and (min-width: 700px) {
     section{
       flex-direction: row;
       width: 60vw;
       height: 80vh;
     }
-    #mobile{ display: none; }
-    #desktop{ display: inline; }
-    }
+       #mobile{ display: none; }
+       #desktop{ display: inline; }
+   }
     </style>
-</head>
+ </head>
 <body>
   <section>
-    <img src="./images/image-product-mobile.jpg" alt="perfume's photo (mobile version)" id="mobile">
-    <img src="./images/image-product-desktop.jpg" alt="perfume's photo (desktop version)" id="desktop">
+      <img src="./images/image-product-mobile.jpg" alt="perfume's photo (mobile version)" id="mobile">
+      <img src="./images/image-product-desktop.jpg" alt="perfume's photo (desktop version)" id="desktop">
     <main>
       <h4>
         PERFUME
-      </h4>
+     </h4>
       <h1>
         <b>
           Gabrielle Essence Eau De Parfum
         </b>
       </h1>
-      <p>
+    <p>
         A floral, solar and voluptuous interpretation composed by Olivier Polge, 
         Perfumer-Creator for the House of CHANEL.
-      </p>
+     </p>
       <div>
         <h1>
           <i>
             <b>
             $149.99
-          </b>
-          </i>
-        </h1>
+         </b>
+        </i>
+      </h1>
         <h3>
           <i>
           <strike>
